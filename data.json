@@ -1,0 +1,76 @@
+{
+  "articles": [
+    {
+      "id": "1735000000001",
+      "title": "Best Heroes for Beginners in Dota 2",
+      "author": "ProPlayer123",
+      "content": "If you're new to Dota 2, choosing the right hero can make a huge difference in your learning experience. Here are some of the best heroes for beginners:\n\n1. **Dragon Knight** - A tanky hero with simple abilities and good survivability. Great for learning the basics of positioning and team fights.\n\n2. **Sniper** - A ranged carry with straightforward mechanics. Perfect for learning how to farm and position yourself in team fights.\n\n3. **Crystal Maiden** - A support hero with powerful abilities. Great for learning map awareness and supporting your team.\n\n4. **Wraith King** - One of the simplest heroes with a built-in resurrection ability. Very forgiving for new players.\n\n5. **Lich** - A support hero with easy-to-use abilities. Great for learning how to support your team effectively.\n\nRemember, the most important thing is to have fun and keep practicing!",
+      "date": "2025-01-15T10:30:00.000Z",
+      "comments": [
+        {
+          "author": "NewbieGamer",
+          "text": "Thanks for the guide! I started with Sniper and it really helped me understand the game better.",
+          "date": "2025-01-15T11:45:00.000Z"
+        },
+        {
+          "author": "DotaVeteran",
+          "text": "I'd also recommend adding Lina to this list. She's great for beginners who want to learn mid lane.",
+          "date": "2025-01-15T14:20:00.000Z"
+        },
+        {
+          "author": "SupportMain",
+          "text": "Crystal Maiden is perfect for learning support role. Her abilities are straightforward and she teaches you about mana management.",
+          "date": "2025-01-15T16:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "1735000000002",
+      "title": "Top 5 Meta Heroes in Current Patch",
+      "author": "MetaAnalyst",
+      "content": "The current meta has shifted significantly with the latest patch. Here are the top 5 heroes dominating ranked matches:\n\n**1. Invoker**\nWith recent buffs to his spell damage, Invoker has become a force to be reckoned with in the mid lane. His versatility makes him a top pick in high-level games.\n\n**2. Pudge**\nThe hook master is back! Pudge's hook range buff has made him extremely popular in both ranked and casual matches. His ability to turn fights around with a single hook is unmatched.\n\n**3. Phantom Assassin**\nPA's critical strike chance has been increased, making her one of the most dangerous carries in the late game. She's a must-ban in most ranked games.\n\n**4. Earthshaker**\nWith the new Aghanim's Scepter upgrade, Earthshaker's Echo Slam has become even more devastating. He's a top-tier support/offlaner.\n\n**5. Storm Spirit**\nThe electric hero has seen a resurgence with mana cost reductions. His mobility and burst damage make him a nightmare for squishy heroes.\n\nWhat heroes are you seeing most in your games?",
+      "date": "2025-01-14T09:15:00.000Z",
+      "comments": [
+        {
+          "author": "RankedGrinder",
+          "text": "I've been seeing Invoker in almost every game. He's so strong right now!",
+          "date": "2025-01-14T10:30:00.000Z"
+        },
+        {
+          "author": "PudgeMain",
+          "text": "Finally Pudge is meta again! Time to climb the ranks with my favorite hero!",
+          "date": "2025-01-14T12:00:00.000Z"
+        },
+        {
+          "author": "ProGamer99",
+          "text": "Don't forget about Shadow Fiend. He's also very strong in this patch, especially in the mid lane.",
+          "date": "2025-01-14T15:45:00.000Z"
+        },
+        {
+          "author": "MetaAnalyst",
+          "text": "Good point! Shadow Fiend is definitely up there. The meta is constantly evolving.",
+          "date": "2025-01-14T16:20:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "1735000000003",
+      "title": "Essential Items Every Player Should Know",
+      "author": "ItemGuide",
+      "content": "Understanding items is crucial for success in Dota 2. Here are some essential items every player should know:\n\n**Starting Items:**\n- Tango: Basic regeneration for laning phase\n- Healing Salve: Quick health restoration\n- Observer Wards: Vision is key to winning games\n\n**Core Items:**\n- Power Treads: Versatile boots that provide stats and attack speed\n- Magic Wand: Life-saving item that can turn fights around\n- Blink Dagger: Essential for initiators and gankers\n\n**Late Game Items:**\n- Black King Bar (BKB): Magic immunity is crucial in team fights\n- Aghanim's Scepter: Upgrades many ultimates significantly\n- Refresher Orb: Double your ultimate abilities\n\n**Support Items:**\n- Force Staff: Save allies or reposition enemies\n- Glimmer Cape: Invisibility for you or allies\n- Mekansm: Team healing in fights\n\nRemember, item builds should be flexible based on the game situation!",
+      "date": "2025-01-13T14:00:00.000Z",
+      "comments": [
+        {
+          "author": "SupportPlayer",
+          "text": "Great guide! I always prioritize Force Staff and Glimmer Cape as support. They save so many lives!",
+          "date": "2025-01-13T15:30:00.000Z"
+        },
+        {
+          "author": "CarryMain",
+          "text": "BKB is absolutely essential for carries. Without it, you just get chain-stunned and die instantly.",
+          "date": "2025-01-13T17:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

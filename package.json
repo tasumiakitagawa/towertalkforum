@@ -1,0 +1,17 @@
+{
+  "name": "dota2-forum",
+  "version": "1.0.0",
+  "description": "Simple Dota 2 forum with JSON database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "forum",
+    "dota2",
+    "json"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+

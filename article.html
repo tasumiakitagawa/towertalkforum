@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - Tower Talk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo">
+                    <h1>
+                        <img src="https://dota2.ru/img/uploads/dota2-logo-official.png" alt="Dota 2 Logo" class="logo-icon">
+                        <span class="logo-text">Tower Talk</span>
+                    </h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="article-container">
+                <div class="article-header">
+                    <a href="index.html" class="back-link">← Back to Articles</a>
+                </div>
+
+                <article class="article" id="articleContent">
+                    <!-- Article content will be loaded via JavaScript -->
+                </article>
+
+                <div class="comments-section">
+                    <h3 class="comments-title">Comments</h3>
+                    
+                    <form id="commentForm" class="comment-form">
+                        <div class="form-group">
+                            <label for="commentAuthor">Your Username</label>
+                            <input type="text" id="commentAuthor" name="commentAuthor" required placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="commentText">Comment</label>
+                            <textarea id="commentText" name="commentText" rows="4" required placeholder="Write your comment..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Comment</button>
+                    </form>
+
+                    <div class="comments-list" id="commentsList">
+                        <!-- Comments will be loaded via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Tower Talk. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Articles data stored directly in HTML (same as index.html)
+        const articlesData = {
+          "articles": [
+            {
+              "id": "1735000000001",
+              "title": "Best Heroes for Beginners in Dota 2",
+              "author": "ProPlayer123",
+              "content": "If you're new to Dota 2, choosing the right hero can make a huge difference in your learning experience. Here are some of the best heroes for beginners:\n\n1. **Dragon Knight** - A tanky hero with simple abilities and good survivability. Great for learning the basics of positioning and team fights.\n\n2. **Sniper** - A ranged carry with straightforward mechanics. Perfect for learning how to farm and position yourself in team fights.\n\n3. **Crystal Maiden** - A support hero with powerful abilities. Great for learning map awareness and supporting your team.\n\n4. **Wraith King** - One of the simplest heroes with a built-in resurrection ability. Very forgiving for new players.\n\n5. **Lich** - A support hero with easy-to-use abilities. Great for learning how to support your team effectively.\n\nRemember, the most important thing is to have fun and keep practicing!",
+              "date": "2025-01-15T10:30:00.000Z",
+              "comments": [
+                {
+                  "author": "NewbieGamer",
+                  "text": "Thanks for the guide! I started with Sniper and it really helped me understand the game better.",
+                  "date": "2025-01-15T11:45:00.000Z"
+                },
+                {
+                  "author": "DotaVeteran",
+                  "text": "I'd also recommend adding Lina to this list. She's great for beginners who want to learn mid lane.",
+                  "date": "2025-01-15T14:20:00.000Z"
+                },
+                {
+                  "author": "SupportMain",
+                  "text": "Crystal Maiden is perfect for learning support role. Her abilities are straightforward and she teaches you about mana management.",
+                  "date": "2025-01-15T16:10:00.000Z"
+                }
+              ]
+            },
+            {
+              "id": "1735000000012",
+              "title": "Top 5 Meta Heroes in Current Patch",
+              "author": "MetaAnalyst",
+              "content": "The current meta has shifted significantly with the latest patch. Here are the top 5 heroes dominating ranked matches:\n\n**1. Invoker**\nWith recent buffs to his spell damage, Invoker has become a force to be reckoned with in the mid lane. His versatility makes him a top pick in high-level games.\n\n**2. Pudge**\nThe hook master is back! Pudge's hook range buff has made him extremely popular in both ranked and casual matches. His ability to turn fights around with a single hook is unmatched.\n\n**3. Phantom Assassin**\nPA's critical strike chance has been increased, making her one of the most dangerous carries in the late game. She's a must-ban in most ranked games.\n\n**4. Earthshaker**\nWith the new Aghanim's Scepter upgrade, Earthshaker's Echo Slam has become even more devastating. He's a top-tier support/offlaner.\n\n**5. Storm Spirit**\nThe electric hero has seen a resurgence with mana cost reductions. His mobility and burst damage make him a nightmare for squishy heroes.\n\nWhat heroes are you seeing most in your games?",
+              "date": "2025-01-14T09:15:00.000Z",
+              "comments": [
+                {
+                  "author": "RankedGrinder",
+                  "text": "I've been seeing Invoker in almost every game. He's so strong right now!",
+                  "date": "2025-01-14T10:30:00.000Z"
+                },
+                {
+                  "author": "PudgeMain",
+                  "text": "Finally Pudge is meta again! Time to climb the ranks with my favorite hero!",
+                  "date": "2025-01-14T12:00:00.000Z"
+                },
+                {
+                  "author": "ProGamer99",
+                  "text": "Don't forget about Shadow Fiend. He's also very strong in this patch, especially in the mid lane.",
+                  "date": "2025-01-14T15:45:00.000Z"
+                },
+                {
+                  "author": "MetaAnalyst",
+                  "text": "Good point! Shadow Fiend is definitely up there. The meta is constantly evolving.",
+                  "date": "2025-01-14T16:20:00.000Z"
+                }
+              ]
+            },
+            {
+              "id": "1735000000013",
+              "title": "Essential Items Every Player Should Know",
+              "author": "ItemGuide",
+              "content": "Understanding items is crucial for success in Dota 2. Here are some essential items every player should know:\n\n**Starting Items:**\n- Tango: Basic regeneration for laning phase\n- Healing Salve: Quick health restoration\n- Observer Wards: Vision is key to winning games\n\n**Core Items:**\n- Power Treads: Versatile boots that provide stats and attack speed\n- Magic Wand: Life-saving item that can turn fights around\n- Blink Dagger: Essential for initiators and gankers\n\n**Late Game Items:**\n- Black King Bar (BKB): Magic immunity is crucial in team fights\n- Aghanim's Scepter: Upgrades many ultimates significantly\n- Refresher Orb: Double your ultimate abilities\n\n**Support Items:**\n- Force Staff: Save allies or reposition enemies\n- Glimmer Cape: Invisibility for you or allies\n- Mekansm: Team healing in fights\n\nRemember, item builds should be flexible based on the game situation!",
+              "date": "2025-01-13T14:00:00.000Z",
+              "comments": [
+                {
+                  "author": "SupportPlayer",
+                  "text": "Great guide! I always prioritize Force Staff and Glimmer Cape as support. They save so many lives!",
+                  "date": "2025-01-13T15:30:00.000Z"
+                },
+                {
+                  "author": "CarryMain",
+                  "text": "BKB is absolutely essential for carries. Without it, you just get chain-stunned and die instantly.",
+                  "date": "2025-01-13T17:00:00.000Z"
+                }
+              ]
+            },
+            {
+    "id": "1735000000002",
+    "title": "Top 5 Most Forgiving Heroes for New Dota 2 Players",
+    "author": "DotaSensei",
+    "content": "Starting in Dota 2 can be brutal. The best way to learn is to play heroes that forgive your mistakes while you learn the game's fundamentals. Here are the top 5 most forgiving heroes:\n\n1. **Wraith King** - The king of simplicity for new carry players. With only one active spell to worry about and a built-in Reincarnation, you get a free pass for one death. This allows you to focus on learning to farm and fight without being punished too harshly for poor positioning.\n\n2. **Dragon Knight** - A tanky midlaner or offlaner with a reliable stun and passive health regeneration. He's difficult to kill and his abilities are straightforward, making him perfect for learning the ropes in a solo lane.\n\n3. **Axe** - For the offlane, Axe's gameplay is simple: you get hit, the enemy gets hurt. His Berserker's Call forces enemies to attack him, while Counter Helix and Blade Mail return the damage. He teaches the importance of initiation with Blink Dagger.\n\n4. **Ogre Magi** - A tanky support who loves to brawl. His abilities are all point-and-click, freeing you from the stress of aiming skillshots. His ultimate, Multicast, adds a fun, luck-based element that can turn fights with multiple spell casts.\n\n5. **Lich** - A ranged support with a very strong laning phase. His Frost Shield protects allies, and his ultimate, Chain Frost, can win teamfights with minimal effort. He helps you learn positioning and how to support your team effectively.",
+    "date": "2025-02-10T14:22:00.000Z",
+    "comments": [
+      {
+        "author": "ReturningNoob",
+        "text": "Wraith King was a game-changer for me. Not having to panic about which button to press let me actually watch the map for the first time.",
+        "date": "2025-02-10T15:30:00.000Z"
+      },
+      {
+        "author": "FrontlineFan",
+        "text": "I'd add Underlord to the offlane list. He's super durable and his passive damage aura helps you farm even if you're having a tough lane.",
+        "date": "2025-02-10T16:45:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000003",
+    "title": "A Beginner's Guide to the Support Role in Dota 2",
+    "author": "WardSlayer",
+    "content": "Playing support is a great way to learn Dota 2, but it can be overwhelming. Start with these heroes to make the process smoother and more enjoyable.\n\n1. **Crystal Maiden** - The quintessential beginner support. She has two strong nukes, a root, and her Arcane Aura provides global mana regeneration for your entire team. This makes you useful just by being in the game.\n\n2. **Witch Doctor** - An excellent choice for new players. His Paralyzing Cask provides strong crowd control, and his ultimate, Death Ward, can deal massive damage in teamfights. He's simple and can feel very impactful.\n\n3. **Lich** - Another fantastic and straightforward support. His Frost Blast is a reliable slow and nuke, and his Sinister Gaze is a great disable. His Chain Frost ultimate is one of the most recognizable and powerful spells in the game.\n\n4. **Jakiro** - A dual-headed dragon with area-of-effect spells that are great for teamfights and pushing towers. While his spells are skillshots, they have a long range and wide area, making them somewhat forgiving to land.\n\nRemember, as a support, your job is to help your core players succeed. Focus on providing vision with wards, harassing the enemy in lane, and using your spells to save or set up kills for your teammates.",
+    "date": "2025-03-05T09:15:00.000Z",
+    "comments": [
+      {
+        "author": "CMain",
+        "text": "CM is love, CM is life. Nothing feels better than landing a good Freezing Field in the middle of a fight.",
+        "date": "2025-03-05T10:00:00.000Z"
+      },
+      {
+        "author": "Pos5Player",
+        "text": "I'd recommend avoiding Lion for now. He's squishy and requires good positioning. WD and Lich are much more forgiving.",
+        "date": "2025-03-05T11:20:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000004",
+    "title": "Easy Carries to Learn the Hard Carry Role",
+    "author": "FarmLikeAPro",
+    "content": "The hard carry role comes with a lot of pressure, but these heroes can help you learn the fundamentals of farming and late-game impact without excessive complexity.\n\n1. **Sniper** - Often the first hero new players are recommended. Kardel has the longest attack range in the game, allowing you to deal damage from a safe distance. He excels at taking objectives and teaches the critical importance of positioning above all else.\n\n2. **Juggernaut** - An easy yet dominant carry who fits into any team composition. He has a flexible item path, a built-in healing spell (Healing Ward), and his ultimate, Omnislash, provides a powerful, targeted kill threat.\n\n3. **Luna** - A simple and effective carry. Her passive Glaives allow her to farm creeps and neutral camps very quickly. Her ultimate, Eclipse, is a powerful teamfight ability that requires no targeting, letting you focus on your positioning during the fight.\n\n4. **Sven** - A classic strength carry. His Storm Hammer is a reliable area stun, and his God's Strength ultimate gives him a massive damage boost. He is a great starter carry for learning how to farm efficiently and then explode in power.\n\nThe key to playing carry is efficient farming. Focus on last-hitting creeps, avoiding unnecessary deaths, and accumulating gold for your core items.",
+    "date": "2025-01-28T18:40:00.000Z",
+    "comments": [
+      {
+        "author": "SniperSpammer",
+        "text": "Sniper is great until the enemy has gap-closing heroes. Then you learn real quick about positioning!",
+        "date": "2025-01-28T19:55:00.000Z"
+      },
+      {
+        "author": "JuggEnjoyer",
+        "text": "Juggernaut's Blade Fury is a lifesaver. It gives you magic immunity, so you can use it to escape when you're in a bad spot.",
+        "date": "2025-01-28T20:10:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000005",
+    "title": "Tanky Offlaners for Beginners: How to Make Space",
+    "author": "TheWall",
+    "content": "The offlane (or hard lane) can be intimidating, but your job is simple: be a disruptive frontliner. These durable heroes are perfect for the role.\n\n1. **Bristleback** - Incredibly beginner-friendly due to his spam-heavy abilities and innate durability. His passive, Bristleback, reduces damage taken from the rear and sides, rewarding you for good positioning. Just spam Quill Spray and be a nuisance.\n\n2. **Tidehunter** - One of the most durable heroes in the game. Your main goal is to initiate fights with your massive area-of-effect ultimate, Ravage. His Anchor Smash helps you farm and reduce enemy damage, and Kraken Shell cleanses stuns and debuffs.\n\n3. **Axe** - A classic initiator. His gameplay revolves around using Berserker's Call to force multiple enemies to attack him, while his Counter Helix and Blade Mail return the damage. He teaches the importance of the Blink Dagger and timing your initiations.\n\n4. **Dragon Knight** - While often played mid, Dragon Knight is also a great offlaner for beginners. He is naturally tanky with health regeneration and a reliable stun in Dragon Tail. His ultimate, Elder Dragon Form, allows him to push towers effectively.\n\nAs an offlaner, your goal isn't always to get the most kills. It's to create space for your carry to farm by forcing the enemy team to deal with you.",
+    "date": "2025-04-17T12:05:00.000Z",
+    "comments": [
+      {
+        "author": "BristlebackFan",
+        "text": "Bristleback is the best. You just run at people and they can't kill you. So much fun for a new player.",
+        "date": "2025-04-17T13:15:00.000Z"
+      },
+      {
+        "author": "TidePlayer",
+        "text": "Landing a 5-man Ravage is the best feeling in Dota. Tide is great for learning fight timing.",
+        "date": "2025-04-17T14:01:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000006",
+    "title": "SS-Tier Beginner Heroes According to Community Tier Lists",
+    "author": "MetaAnalyst",
+    "content": "Community tier lists for 2025 have coalesced around a core group of heroes considered the absolute best for beginners. These 'SS-Tier' picks are straightforward and highly effective.\n\n1. **Wraith King** - Topping almost every list. His simple kit (one active spell) and free Reincarnation make him the most forgiving hero for new players learning the carry role.\n\n2. **Luna** - Praised for her simple farming pattern with Moon Glaives and her powerful, no-target-required teamfight ultimate, Eclipse.\n\n3. **Sven** - A great starter carry with a reliable stun and a massive damage steroid in his ultimate. He is easy to farm with and has a clear gameplay plan.\n\n4. **Crystal Maiden** - The definitive beginner support. Her abilities are basic but powerful, and her global mana aura makes her a constant benefit to her team.\n\n5. **Jakiro** - A support hero whose strength lies in his area-control and pushing power. His Liquid Fire is excellent for destroying towers, and his other spells have wide, forgiving areas of effect.\n\nSticking to these SS-Tier heroes when you're starting out can dramatically smooth out the steep learning curve of Dota 2.",
+    "date": "2025-05-22T20:50:00.000Z",
+    "comments": [
+      {
+        "author": "ListFollower",
+        "text": "Followed this list and my win rate actually improved. Sticking to simple heroes lets you learn the game, not just the hero.",
+        "date": "2025-05-22T21:30:00.000Z"
+      },
+      {
+        "author": "VeteranPlayer",
+        "text": "It's interesting how the 'easiest' heroes list has remained so consistent over the years. These are classics for a reason.",
+        "date": "2025-05-22T22:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000007",
+    "title": "Learning Mid Lane with Vengeful Spirit and Zeus",
+    "author": "MidOrFeed",
+    "content": "Mid lane is a high-pressure role, but you can learn it with the right heroes. While not traditional mid picks, these two are great for beginners.\n\n1. **Vengeful Spirit** - An unconventional but excellent mid for beginners. Building Power Treads into Aghanim's Scepter gives you a second life in fights, allowing you to make mistakes and still contribute. She doesn't require complex active items, and Nether Swap teaches you about positioning and saving allies.\n\n2. **Zeus** - A safe and simple mid pick. His Arc Lightning allows him to consistently secure last hits and harass the enemy laner from a distance. His ultimate, Thundergod's Wrath, lets you impact other lanes globally without leaving your own, teaching you about map awareness.\n\nStarting with these heroes allows you to focus on the core concepts of the mid lane: last-hitting, controlling the tempo, and helping other lanes, without being overwhelmed by a complex hero mechanic.",
+    "date": "2025-06-08T07:30:00.000Z",
+    "comments": [
+      {
+        "author": "VengeMid",
+        "text": "Tried Venge mid after reading this and it's surprisingly effective. The double life from Aghs is so forgiving.",
+        "date": "2025-06-08T08:45:00.000Z"
+      },
+      {
+        "author": "ZeusSpammer",
+        "text": "Zeus is perfect for learning map awareness. You're constantly looking for opportunities to snipe with your ult.",
+        "date": "2025-06-08T09:20:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000008",
+    "title": "The 'I Get Hit, You Get Hurt' Guide to Dota 2",
+    "author": "TheBruiser",
+    "content": "Do you like being in the thick of the fight and winning through sheer toughness? These heroes are for you.\n\n1. **Axe** - The poster child for this playstyle. His entire kit encourages you to jump into the enemy team. With Berserker's Call and Blade Mail, you can turn the enemy's damage against them.\n\n2. **Bristleback** - A walking tank that becomes more dangerous the longer a fight goes on. Spam Quill Spray to stack damage on the entire enemy team. Your Bristleback passive means you can often just turn and run away when things get too hot.\n\n3. **Centaur Warrunner** - Another incredibly durable strength hero. His Return passive damages enemies when they attack him. His ultimate, Stampede, is a fantastic tool for initiating fights or helping your whole team escape.\n\n4. **Wraith King** - While a carry, he fits this theme perfectly. He is a bulky strength hero who can wade into fights, deal consistent damage with his critical strikes, and force the enemy to kill him twice.\n\nPlaying these heroes teaches you the limits of your durability and how to be an effective frontliner for your team.",
+    "date": "2025-02-28T16:10:00.000Z",
+    "comments": [
+      {
+        "author": "AxeIsAxe",
+        "text": "CALLING! So satisfying when you call 3+ heroes and your team cleans up. Simple and effective.",
+        "date": "2025-02-28T17:25:00.000Z"
+      },
+      {
+        "author": "BristleLover",
+        "text": "Nothing better than having the entire enemy team chase you while your Quill Sprays slowly kill them all.",
+        "date": "2025-02-28T18:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000009",
+    "title": "Heroes with Simple, Point-and-Click Abilities",
+    "author": "ClicksNotSkills",
+    "content": "If you're struggling with skillshots and complex combinations, start with these heroes whose power comes from reliable, targeted abilities.\n\n1. **Ogre Magi** - The king of point-and-click. His Fireblast is a targeted stun, and Ignite is a targeted slow. You just select an enemy and cast, freeing your mind to focus on who to target and when.\n\n2. **Vengeful Spirit** - Her Magic Missile is a straightforward targeted stun. Her ultimate, Nether Swap, is a game-changing ability that simply swaps your position with a target's, which can be used to save an ally or secure a kill.\n\n3. **Lich** - Most of Lich's kit is targeted. Frost Blast is a reliable nuke and slow on a single target, and Sinister Gaze is a channeled disable that drains mana.\n\n4. **Dragon Knight** - His Dragon Tail is a melee-range targeted stun. Once you're in range, you can't miss it, making his ganks and lockdown very reliable.\n\nMastering these heroes first will build your confidence and game sense before you move on to heroes that require more precise aim.",
+    "date": "2025-03-20T11:45:00.000Z",
+    "comments": [
+      {
+        "author": "NewPlayer",
+        "text": "This is exactly what I needed. I can't land skillshots to save my life. Ogre Magi is perfect for me.",
+        "date": "2025-03-20T12:50:00.000Z"
+      },
+      {
+        "author": "StrategyFan",
+        "text": "Don't underestimate the power of simple targeted stuns. They are often more reliable in chaotic fights than big skillshots.",
+        "date": "2025-03-20T13:35:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000010",
+    "title": "Expanding Your Hero Pool: S-Tier Beginner Picks",
+    "author": "GuideWriter",
+    "content": "Once you're comfortable with the basics, it's time to expand your horizons. These S-Tier beginner heroes are slightly more complex but excellent for learning new concepts.\n\n1. **Lifestealer** - A straightforward carry whose mechanics are easy to grasp. His Rage provides spell immunity, a crucial concept to learn, and his Feast deals damage based on the enemy's health. He teaches you to prioritize targets and use your immunity at the right time.\n\n2. **Necrophos** - A tanky magic damage hero. His Heartstopper Aura passively damages enemies around him, and his Death Pulse provides sustain. His ultimate, Reaper's Scythe, is a powerful execute that requires good timing. He teaches you to maintain good positioning in the middle of a fight.\n\n3. **Witch Doctor** - A support with high damage potential. His Paralyzing Cask is a great stun that bounces, and his Maledict is a powerful damage-over-time spell. His Death Ward ultimate requires careful positioning but can decimate the enemy team.\n\n4. **Shadow Shaman** - A support with incredibly strong disables. He has two reliable hexes and a shackle that holds an enemy in place. His ultimate, Mass Serpent Ward, is one of the best pushing and tower-destroying spells in the game.\n\nThese heroes introduce new mechanics without being overwhelmingly difficult, helping you grow as a player.",
+    "date": "2025-07-01T15:20:00.000Z",
+    "comments": [
+      {
+        "author": "NaixPlayer",
+        "text": "Lifestealer's Rage is a great 'oh crap' button for when you get stunned. Really helps you survive while learning.",
+        "date": "2025-07-01T16:05:00.000Z"
+      },
+      {
+        "author": "SupportMain",
+        "text": "Shadow Shaman is so good for taking objectives. Even if your team doesn't push, you can take towers yourself with your wards.",
+        "date": "2025-07-01T17:11:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "1735000000011",
+    "title": "The One-Hero Challenge: Mastering a Single Beginner Pick",
+    "author": "SpamToVictory",
+    "content": "One of the fastest ways to learn Dota 2 is to 'spam' a single easy hero for your first many games. This allows you to learn the game itself without constantly relearning a new hero. Here are the top candidates for the one-hero challenge.\n\n- **For Carry:** Wraith King. With only one active spell, you can fully focus on last-hitting, map awareness, and item progression. His Reincarnation means you spend less time dead and more time playing.\n\n- **For Mid:** Dragon Knight. His tankiness forgives positioning errors in the lonely mid lane. He has a simple farming tool, a reliable stun, and his ultimate makes him a potent pusher and teamfighter.\n\n- **For Offlane:** Bristleback. Your game plan is simple: be unkillable and spam Quill Spray. You will naturally learn about mana management, stacking your passive damage, and how to be a disruptive frontliner.\n\n- **For Support:** Crystal Maiden or Ogre Magi. Both are tankier than most supports (Ogre especially) and have simple, impactful spells. You can focus on warding, pulling creeps, and helping your lane partner.\n\nBy limiting hero complexity, you accelerate your understanding of Dota's deeper mechanics.",
+    "date": "2025-04-05T08:00:00.000Z",
+    "comments": [
+      {
+        "author":"WKSpammer",
+        "text": "I spammed Wraith King to 100 games. I now finally understand farming patterns and item timings. Highly recommend this method.",
+        "date": "2025-04-05T09:15:00.000Z"
+      },
+      {
+        "author": "OGFan",
+        "text": "Ogre Magi is the best for this. You're always useful, even if you're having a bad game. Multicast is just a bonus!",
+        "date": "2025-04-05T10:40:00.000Z"
+      }
+    ]
+  }
+          ]
+        };
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get article ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+            
+            if (articleId) {
+                loadArticle(articleId);
+                loadComments(articleId);
+            }
+
+            // Handle comment form
+            const commentForm = document.getElementById('commentForm');
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const author = document.getElementById('commentAuthor').value;
+                const text = document.getElementById('commentText').value;
+                
+                if (author && text && articleId) {
+                    addComment(articleId, author, text);
+                    document.getElementById('commentForm').reset();
+                    loadComments(articleId);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
